@@ -5,10 +5,16 @@
 
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
+  background-color: wheat;
+  height: 100vh;
   /*grid-gap: 10px;*/
 }
 div{
-  margin: 8px;
+  /*margin: 8px;*/
 }
-
-
+.app-wrapper-content{
+  grid-area: c;
+  background-color: #679EFE;
+  border-radius: 5px;
+  margin: 10px;
+}

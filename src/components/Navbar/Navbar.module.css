@@ -1,9 +1,17 @@
 .nav{
     grid-area: n;
-    background-color: blueviolet;
+    background-color: #EDEEF0;
+    margin: 10px;
+    border-radius: 5px;
 }
 .item{
-    color: white;
+    color: #557790;
+    font-weight:normal;
+    font-size: 15px;
+    padding-left: 45px;
+}
+.item:hover{
+    background-color: #D1D9E0;
 }
 .item.gold{
     color: gold;

@@ -4,6 +4,8 @@ import Post from "./Post/Post";
 
 
 const MyPosts = () => {
+
+
     return    <div>
             My posts
             <div>
@@ -14,10 +16,8 @@ const MyPosts = () => {
                 posts
 
             </div>
-        <Post/>
-        <Post/>
-        <Post/>
-        <Post/>
+        <Post message = 'Hi, how are you?' likes = '15'/>
+        <Post message = 'It`s my first post' likes = '20'/>
         <Post/>
 
         </div>

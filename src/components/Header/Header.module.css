@@ -1,7 +1,14 @@
 .header{
     grid-area: h;
-    background-color: aqua;
+    background-color: #4A76A8;
+    display: flex;
+
 }
 .header img{
     width: 60px;
+    margin-left: 40px;
+}
+p{
+    font-weight: bold;
+    color: white;
 }
