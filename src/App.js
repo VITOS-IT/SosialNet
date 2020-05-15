@@ -9,7 +9,8 @@ import {BrowserRouter} from "react-router-dom";
 import News from "./components/News/News";
 
 
-const App = () => {
+const App = (props) => {
+
     return (
         <BrowserRouter>
             <div className={'app-wrapper'}>
@@ -17,8 +18,9 @@ const App = () => {
                 <Navbar/>
                 {/*<Profile/>*/}
                 <div className={'app-wrapper-content'}>
-                    <Route path={'/profile'} component={Profile}/>
-                    <Route path='/dialogs' component={Dialogs}/>
+                    <Route path={'/profile'} render={()=><Profile postsData={props.postsData}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogsData={props.dialogsData}
+                                                                  messageData={props.messageData}/>}/>
                     <Route path={'/news'} component={News}/>
                 </div>
             </div>
