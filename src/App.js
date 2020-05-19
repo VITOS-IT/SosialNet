@@ -12,7 +12,7 @@ import News from "./components/News/News";
 const App = (props) => {
 
     return (
-        <BrowserRouter>
+
             <div className={'app-wrapper'}>
                 <Header/>
                 <Navbar state={props.state.navBlock}/>
@@ -24,7 +24,7 @@ const App = (props) => {
                     <Route path={'/news'} component={News}/>
                 </div>
             </div>
-        </BrowserRouter>
+
     );
 }
 
