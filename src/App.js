@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
 import Dialogs from "./components/Dialogs/Dialods";
 import Route from "react-router-dom/es/Route";
+
 import {BrowserRouter} from "react-router-dom";
 import News from "./components/News/News";
 
@@ -19,7 +20,8 @@ const App = (props) => {
                 {/*<Profile/>*/}
                 <div className={'app-wrapper-content'}>
                     <Route path={'/profile'} render={()=><Profile state={props.state.profilePage}
-                                                        addPost={props.addPost}/>}/>
+                                                        addPost={props.addPost}
+                                                        updateNewPostText={props.updateNewPostText}/>}/>
                     <Route path='/dialogs' render={() => <Dialogs state={props.state.messagesPage}/>}/>
                     <Route path={'/news'} component={News}/>
                 </div>
