@@ -1,8 +1,6 @@
-const ADD_POST = "ADD-POST";
-const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
-const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
-const SEND_MESSAGE = "SEND-MESSAGE";
-
+import profileReduser from "./profileReduser";
+import dialogReduser from "./dialogsReduser";
+import navblockReduser from "./navblockReduser";
 
 let store = {
     _state: {
@@ -36,64 +34,22 @@ let store = {
         }
     },
 
-    rerenderEntireTree() {
-        console.log('state changed');
-    },
-
     dispatch(action) {
-        if (action.type === "GET-STATE") {
-            return this._state;
-        } else if (action.type === UPDATE_NEW_POST_TEXT) {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        } else if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                message: this._state.profilePage.newPostText,
-                likesCount: 0
-            }
-            this._state.profilePage.postsData.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber();
-        } else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
-            this._state.dialogsPage.newMessageBody = action.body;
-            this._callSubscriber(this._state);
-        } else if (action.type === SEND_MESSAGE) {
-            let body = {
-                message: this._state.dialogsPage.newMessageBody,
-                id: this._state.dialogsPage.messages.length + 1
-            };
-            this._state.dialogsPage.messages.push(body);
-            this._state.dialogsPage.newMessageBody = '';
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReduser(this._state.profilePage, action);
+        this._state.dialogsPage = dialogReduser(this._state.dialogsPage, action);
+        this._state.navBlock = navblockReduser(this._state.navBlock, action);
+
+        this._callSubscriber(this._state);
+
     },
 
     _callSubscriber
         () {
         console.log('aasaasa')
-    }
-    ,
+    },
 
     subscribe(observer) {
         this._callSubscriber = observer;
-    }
-    ,
-
-}
-
-export const addPostActionCreator = () => ({type: ADD_POST})
-
-export const updateNewPostTextActionCreator = (text) => {
-    return {
-        type: UPDATE_NEW_POST_TEXT, newText: text
-    }
-}
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
-
-export const updateNewMessageBodyCreator = (text) => {
-    return {
-        type: UPDATE_NEW_MESSAGE_BODY, body: text
     }
 }
 export default store;

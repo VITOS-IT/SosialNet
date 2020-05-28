@@ -12,13 +12,13 @@ import App from "./App";
 let rerenderEntireTree = (state => {
     ReactDOM.render(
         <BrowserRouter>
-            <App state={store.dispatch({type: "GET-STATE"})}
+            <App state={store._state}
                  dispatch={store.dispatch.bind(store)}/>
         </BrowserRouter>, document.getElementById('root')
     );
 });
 
-rerenderEntireTree(store.dispatch({type: "GET-STATE"}));
+rerenderEntireTree(store._state);
 
 store.subscribe(rerenderEntireTree);
 
