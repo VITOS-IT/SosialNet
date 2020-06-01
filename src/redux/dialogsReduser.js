@@ -1,8 +1,23 @@
 const UPDATE_NEW_MESSAGE_BODY = "UPDATE-NEW-MESSAGE-BODY";
 const SEND_MESSAGE = "SEND-MESSAGE";
 
+let initialState = {
+    messages: [
+        {id: 1, message: 'Hi'},
+        {id: 2, message: 'How are you'},
+        {id: 3, message: 'yo'},
+        {id: 4, message: 'yo'},
+        {id: 5, message: 'yo'}],
+    dialogs: [
+        {id: 1, name: 'Dimych', avatar: 'https://download-cs.net/steam/avatars/3412.jpg'},
+        {id: 2, name: 'Andrew', avatar: 'https://download-cs.net/steam/avatars/3412.jpg'},
+        {id: 3, name: 'Sweta', avatar: 'https://download-cs.net/steam/avatars/3412.jpg'},
+        {id: 4, name: 'Anna', avatar: 'https://download-cs.net/steam/avatars/3412.jpg'},
+        {id: 5, name: 'Den', avatar: 'https://download-cs.net/steam/avatars/3412.jpg'}],
+    newMessageBody: ''
+};
 
-const dialogReduser = (state, action) => {
+const dialogReduser = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE:
             let body = {

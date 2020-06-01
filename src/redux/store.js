@@ -43,6 +43,9 @@ let store = {
 
     },
 
+    getState() {
+        return this._state;
+    },
     _callSubscriber
         () {
         console.log('aasaasa')
@@ -52,4 +55,4 @@ let store = {
         this._callSubscriber = observer;
     }
 }
-export default store;
+// export default store;
