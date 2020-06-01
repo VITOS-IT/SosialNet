@@ -10,10 +10,11 @@ import App from "./App";
 
 
 let rerenderEntireTree = (state => {
-    debugger
+
     ReactDOM.render(
         <BrowserRouter>
-                <App state={state}
+                <App store={store}
+                     state={state}
                  dispatch={store.dispatch.bind(store)}/>
         </BrowserRouter>, document.getElementById('root')
     );
@@ -22,7 +23,7 @@ let rerenderEntireTree = (state => {
 rerenderEntireTree(store.getState());
 
 store.subscribe(() => {
-    let state = store.getState();
+    let state= store.getState();
     rerenderEntireTree(state);
 });
 
