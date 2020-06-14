@@ -2,3 +2,6 @@
 display: flex;
     border: solid black;
 }
+.selectedPage{
+    font-weight: bold;
+}
