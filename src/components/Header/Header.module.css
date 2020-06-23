@@ -13,3 +13,8 @@ p{
     font-weight: bold;
     color: white;
 }
+.loginBlock{
+    margin-left: 50px;
+   align-items: center;
+    color: red;
+}
