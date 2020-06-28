@@ -8,10 +8,10 @@ import {
     toggleIsFetching,
     unFollow
 } from "../../redux/usersReduser";
-import * as axios from "axios";
 import Users from "./Users";
-
 import Preloader from "../common/Preloader/Preloader";
+import {usersAPI} from "../../api/api";
+
 
 
 class UsersContainer extends React.Component {
@@ -19,21 +19,23 @@ class UsersContainer extends React.Component {
     componentDidMount() {
         this.props.toggleIsFetching(true);
         if (this.props.users.length === 0) {
-            axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).
+            usersAPI.getUsers(this.props.currentPage, this.props.pageSize).
             then(response => {
+
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(response.data.totalCount)
+                this.props.setUsers(response.items);
+                this.props.setTotalUsersCount(response.totalCount)
             });
         }
     }
 
     onPageChanget = (pageNumber) => {
         this.props.toggleIsFetching(true);
-        this.props.setCurrentPage(pageNumber)
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`).then(response => {
+        this.props.setCurrentPage(pageNumber);
+        usersAPI.getUsers(pageNumber, this.props.pageSize)
+            .then(response => {
             this.props.toggleIsFetching(false);
-            this.props.setUsers(response.data.items);
+            this.props.setUsers(response.items);
 
         });
 
@@ -48,7 +50,7 @@ class UsersContainer extends React.Component {
                    currentPage={this.props.currentPage}
                    users={this.props.users}
                    onPageChanget={this.onPageChanget}
-                   unfollow={this.props.unfollow}
+                   unfollow={this.props.unFollow}
                    follow={this.props.follow}
             />
         </>
