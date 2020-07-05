@@ -1,3 +1,5 @@
+import {usersAPI} from "../api/api";
+
 const FOLLOW = "FOLLOW";
 const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
@@ -59,12 +61,55 @@ const usersReduser = (state = initialState, action) => {
     }
 }
 
-export const follow = (userId) => ({type: FOLLOW, userId});
-export const unFollow = (userId) => ({type: UNFOLLOW, userId});
+export const followSuccess = (userId) => ({type: FOLLOW, userId});
+export const unfollowSuccess = (userId) => ({type: UNFOLLOW, userId});
 export const setUsers = (users) => ({type: SET_USERS, users});
 export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage: currentPage});
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_USERS_COUNT,  count:totalUsersCount});
 export const toggleIsFetching = (isFetching) => ({type: TOGLE_IS_FETCHIMG,    isFetching});
 export const toggleFollowingProgress = (isFetching, userId) => ({type: TOGLE_IS_FOLLOWING_PROGRESS, isFetching, userId});
+
+export const getUsers = (currentPage, pageSize)=>{
+    return (dispatch) => {
+        dispatch(toggleIsFetching(true));
+            usersAPI.getUsers(currentPage, pageSize).
+            then(response => {
+
+                dispatch(toggleIsFetching(false));
+                dispatch(setUsers(response.items));
+                dispatch(setTotalUsersCount(response.totalCount))
+            });
+
+    }
+}
+
+export const unfollow = (userId) =>{
+    return (dispatch) => {
+        dispatch(toggleFollowingProgress(true,userId));
+
+        usersAPI.unfollowUser(userId)
+            .then(response => {
+                if (response.resultCode == 0) {
+                    dispatch(unfollowSuccess(userId))
+                }
+                dispatch(toggleFollowingProgress(false, userId));
+            });
+    }
+}
+
+export const follow = (userId) => {
+    return (dispatch) => {
+        dispatch(toggleFollowingProgress(true, userId));
+        usersAPI.followUser(userId)
+            .then(response => {
+
+                if (response.resultCode == 0) {
+                    dispatch(followSuccess(userId))
+                }
+                dispatch(toggleFollowingProgress(false,userId));
+
+            });
+    }
+}
 
 export default usersReduser;
