@@ -55,6 +55,7 @@ export const addPostActionCreator = () => ({type: ADD_POST})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE , profile})
 export const setStatus = (status) => ({type: SET_STATUS , status})
 
+//sanki dalshe
 export const getUserProfile =(userId) => (dispatch) => {
     usersAPI.getProfile(userId).then(response => {
             dispatch(setUserProfile(response));

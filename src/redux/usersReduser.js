@@ -55,7 +55,7 @@ const usersReduser = (state = initialState, action) => {
                 ...state,
                 followingInProgress: action.isFetching
                     ?[...state.followingInProgress, action.userId]
-                    :state.followingInProgress.filter(id => id != action.userId)}
+                    :state.followingInProgress.filter(id => id !== action.userId)}
         default:
             return state;
     }
@@ -72,8 +72,8 @@ export const toggleFollowingProgress = (isFetching, userId) => ({type: TOGLE_IS_
 export const getUsers = (currentPage, pageSize)=>{
     return (dispatch) => {
         dispatch(toggleIsFetching(true));
-            usersAPI.getUsers(currentPage, pageSize).
-            then(response => {
+            usersAPI.getUsers(currentPage, pageSize)
+                .then(response => {
 
                 dispatch(toggleIsFetching(false));
                 dispatch(setUsers(response.items));
@@ -89,7 +89,7 @@ export const unfollow = (userId) =>{
 
         usersAPI.unfollowUser(userId)
             .then(response => {
-                if (response.resultCode == 0) {
+                if (response.resultCode === 0) {
                     dispatch(unfollowSuccess(userId))
                 }
                 dispatch(toggleFollowingProgress(false, userId));
@@ -103,7 +103,7 @@ export const follow = (userId) => {
         usersAPI.followUser(userId)
             .then(response => {
 
-                if (response.resultCode == 0) {
+                if (response.resultCode === 0) {
                     dispatch(followSuccess(userId))
                 }
                 dispatch(toggleFollowingProgress(false,userId));
