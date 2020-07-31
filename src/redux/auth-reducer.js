@@ -35,4 +35,13 @@ export const getAuthUserData = () => (dispatch) =>{
             }
         });
 }
+
+export const authLogin = (email, pass, rememberMe) => {
+    console.log('login '+email+ ' ' + pass + ' ' + rememberMe)
+    authAPI.login(email, pass, rememberMe)
+        .then(response => {
+            console.log(response);
+            console.log(response.data.resultCode);
+        });
+}
 export default authReducer;
