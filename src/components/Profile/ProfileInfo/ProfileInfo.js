@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
     return (
         <div>
             <div>
-                <img
+                <img className={s.content}
                     alt='something'
                     src={'https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg'}/>
             </div>
