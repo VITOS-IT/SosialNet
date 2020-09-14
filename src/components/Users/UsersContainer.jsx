@@ -10,7 +10,6 @@ import {
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
 import {
-    getAllUsers,
     getCurrentPage,
     getFollowingInProgress,
     getIsFetching,
