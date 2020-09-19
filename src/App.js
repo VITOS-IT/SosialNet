@@ -1,8 +1,6 @@
 import React from 'react';
 import './App.css';
-
 import Navbar from "./components/Navbar/Navbar";
-
 import News from "./components/News/News";
 import DialogsContainer from "./components/Dialogs/DialodsContainer";
 import UsersContainer from "./components/Users/UsersContainer";

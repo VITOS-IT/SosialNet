@@ -1,6 +1,3 @@
-import {profileAPI, usersAPI} from "../api/api";
-import {render} from "@testing-library/react";
-import App from "../App";
 import React from "react";
 import profileReduser, {addPostActionCreator, deletePost} from "./profileReduser";
 
@@ -32,4 +29,10 @@ it('after deleting length of message should be decrement', () =>{
     let newState = profileReduser(state, action);
 
     expect(newState.postsData.length).toBe(3)
+})
+it("after deleting length of message shouldn't change if Id incorrect", () =>{
+    let action = deletePost(1000);
+    let newState = profileReduser(state, action);
+
+    expect(newState.postsData.length).toBe(4)
 })
