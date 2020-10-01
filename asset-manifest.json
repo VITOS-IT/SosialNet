@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/VITOS-IT/SosialNet/static/css/main.6bd9bcce.chunk.css",
+    "main.js": "/VITOS-IT/SosialNet/static/js/main.849a657a.chunk.js",
+    "main.js.map": "/VITOS-IT/SosialNet/static/js/main.849a657a.chunk.js.map",
+    "runtime-main.js": "/VITOS-IT/SosialNet/static/js/runtime-main.e8ed43e1.js",
+    "runtime-main.js.map": "/VITOS-IT/SosialNet/static/js/runtime-main.e8ed43e1.js.map",
+    "static/js/2.c94ceb40.chunk.js": "/VITOS-IT/SosialNet/static/js/2.c94ceb40.chunk.js",
+    "static/js/2.c94ceb40.chunk.js.map": "/VITOS-IT/SosialNet/static/js/2.c94ceb40.chunk.js.map",
+    "index.html": "/VITOS-IT/SosialNet/index.html",
+    "precache-manifest.2a1479ec8554607ac0d2f060728acf96.js": "/VITOS-IT/SosialNet/precache-manifest.2a1479ec8554607ac0d2f060728acf96.js",
+    "service-worker.js": "/VITOS-IT/SosialNet/service-worker.js",
+    "static/css/main.6bd9bcce.chunk.css.map": "/VITOS-IT/SosialNet/static/css/main.6bd9bcce.chunk.css.map",
+    "static/js/2.c94ceb40.chunk.js.LICENSE.txt": "/VITOS-IT/SosialNet/static/js/2.c94ceb40.chunk.js.LICENSE.txt",
+    "static/media/2.svg": "/VITOS-IT/SosialNet/static/media/2.a56b29da.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e8ed43e1.js",
+    "static/js/2.c94ceb40.chunk.js",
+    "static/css/main.6bd9bcce.chunk.css",
+    "static/js/main.849a657a.chunk.js"
+  ]
+}
