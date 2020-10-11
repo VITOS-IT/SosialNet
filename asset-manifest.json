@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/SosialNet/static/css/main.6bd9bcce.chunk.css",
-    "main.js": "/SosialNet/static/js/main.e0e57624.chunk.js",
-    "main.js.map": "/SosialNet/static/js/main.e0e57624.chunk.js.map",
+    "main.js": "/SosialNet/static/js/main.9da809a1.chunk.js",
+    "main.js.map": "/SosialNet/static/js/main.9da809a1.chunk.js.map",
     "runtime-main.js": "/SosialNet/static/js/runtime-main.215e0767.js",
     "runtime-main.js.map": "/SosialNet/static/js/runtime-main.215e0767.js.map",
-    "static/js/2.c94ceb40.chunk.js": "/SosialNet/static/js/2.c94ceb40.chunk.js",
-    "static/js/2.c94ceb40.chunk.js.map": "/SosialNet/static/js/2.c94ceb40.chunk.js.map",
+    "static/js/2.dc1474df.chunk.js": "/SosialNet/static/js/2.dc1474df.chunk.js",
+    "static/js/2.dc1474df.chunk.js.map": "/SosialNet/static/js/2.dc1474df.chunk.js.map",
     "index.html": "/SosialNet/index.html",
-    "precache-manifest.05db4da56cf93ccf5dc18070958cb9c3.js": "/SosialNet/precache-manifest.05db4da56cf93ccf5dc18070958cb9c3.js",
+    "precache-manifest.b2295fcef7ad17adb2918c3ef1a04009.js": "/SosialNet/precache-manifest.b2295fcef7ad17adb2918c3ef1a04009.js",
     "service-worker.js": "/SosialNet/service-worker.js",
     "static/css/main.6bd9bcce.chunk.css.map": "/SosialNet/static/css/main.6bd9bcce.chunk.css.map",
-    "static/js/2.c94ceb40.chunk.js.LICENSE.txt": "/SosialNet/static/js/2.c94ceb40.chunk.js.LICENSE.txt",
+    "static/js/2.dc1474df.chunk.js.LICENSE.txt": "/SosialNet/static/js/2.dc1474df.chunk.js.LICENSE.txt",
     "static/media/2.svg": "/SosialNet/static/media/2.a56b29da.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.215e0767.js",
-    "static/js/2.c94ceb40.chunk.js",
+    "static/js/2.dc1474df.chunk.js",
     "static/css/main.6bd9bcce.chunk.css",
-    "static/js/main.e0e57624.chunk.js"
+    "static/js/main.9da809a1.chunk.js"
   ]
 }
