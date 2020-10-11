@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/SosialNet/static/css/main.6bd9bcce.chunk.css",
-    "main.js": "/SosialNet/static/js/main.9da809a1.chunk.js",
-    "main.js.map": "/SosialNet/static/js/main.9da809a1.chunk.js.map",
+    "main.js": "/SosialNet/static/js/main.49e8082c.chunk.js",
+    "main.js.map": "/SosialNet/static/js/main.49e8082c.chunk.js.map",
     "runtime-main.js": "/SosialNet/static/js/runtime-main.215e0767.js",
     "runtime-main.js.map": "/SosialNet/static/js/runtime-main.215e0767.js.map",
     "static/js/2.dc1474df.chunk.js": "/SosialNet/static/js/2.dc1474df.chunk.js",
     "static/js/2.dc1474df.chunk.js.map": "/SosialNet/static/js/2.dc1474df.chunk.js.map",
     "index.html": "/SosialNet/index.html",
-    "precache-manifest.b2295fcef7ad17adb2918c3ef1a04009.js": "/SosialNet/precache-manifest.b2295fcef7ad17adb2918c3ef1a04009.js",
+    "precache-manifest.d4f7bdd720f286eacf474eaed0424bff.js": "/SosialNet/precache-manifest.d4f7bdd720f286eacf474eaed0424bff.js",
     "service-worker.js": "/SosialNet/service-worker.js",
     "static/css/main.6bd9bcce.chunk.css.map": "/SosialNet/static/css/main.6bd9bcce.chunk.css.map",
     "static/js/2.dc1474df.chunk.js.LICENSE.txt": "/SosialNet/static/js/2.dc1474df.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.215e0767.js",
     "static/js/2.dc1474df.chunk.js",
     "static/css/main.6bd9bcce.chunk.css",
-    "static/js/main.9da809a1.chunk.js"
+    "static/js/main.49e8082c.chunk.js"
   ]
 }
